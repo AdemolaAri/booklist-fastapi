@@ -2,9 +2,9 @@ from app.model.book import BookInDB
 
 MockBooks = [
     BookInDB(id=1, title="Northanger Abbey",
-             author="Jane Austen", price="18.20", inventory=3),
+             author="Jane Austen", year_of_publication=1814, review="Great"),
     BookInDB(id=2, title="Siddhartha", author="Hermann Hesse",
-             price="6.50", inventory=2),
+             year_of_publication=2000, review="Mid"),
     BookInDB(id=3, title="The Trial", author="Franz Kafka",
-             price="9.20", inventory=1),
+             year_of_publication=1999, review="Bad"),
 ]

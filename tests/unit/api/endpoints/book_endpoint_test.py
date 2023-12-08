@@ -12,7 +12,8 @@ class TestBookEndPoint:
 
     def test_create_book(self):
         tempDB = MockBooks[:]
-        book.create_book(Book(**{'title': 'test', 'author': 'test'}))
+        book.create_book(Book(
+            **{'title': 'test', 'author': 'test', 'year_of_publication': 2021, 'review': None}))
         assert len(MockBooks) == len(tempDB) + 1
         assert MockBooks[-1].title == 'test'
         assert MockBooks[-1].author == 'test'
