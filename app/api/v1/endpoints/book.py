@@ -24,7 +24,7 @@ def get_book(book_id: int):
 
 @router.post("/books")
 def create_book(book: Book, status_code=status.HTTP_201_CREATED) -> List[BookInDB]:
-    MockBooks.append(book)
-    print(MockBooks)
-
+    id = len(MockBooks) + 1
+    new_book = BookInDB(**book.__dict__, id=id)
+    MockBooks.append(new_book)
     return MockBooks
